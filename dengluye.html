@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="font/iconfont.css">
+	<meta id="viewport" name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=0">
+	<script>
+    window.onload = window.onresize = function(){		 
+        var view_width = document.getElementsByTagName('html')[0].getBoundingClientRect().width;
+		//找到标签名为html的第一个
+        var _html = document.getElementsByTagName('html')[0];
+		//如果屏幕宽度大于640 
+		//就用 640/16=40
+		//小于640的时候 不确定 也是尺寸/40
+        view_width>640?_html.style.fontSize = 640 / 16 + 'px':_html.style.fontSize = view_width / 16 + 'px';
+		//最大网页尺寸640 
+		//最大字体（根字体大小） 40
+    }
+</script>
+</head>
+
+<body>
+	<img src="images/logo.png" alt="">
+	<form>
+		<span class="iconfont">&#xe695;</span><input type="text" class="text" placeholder="E-mail address"><br>
+		<span class="iconfont">&#xe6cd;</span><input type="password" class="password" placeholder="Please enter your password"><br>
+		<input type="submit" value="login" class="login">
+	</form>	
+	<a href="#">Forgot password?</a>
+	<footer>
+		<div class="facebook">
+			<span class="iconfont">&#xe621;</span><a href="#">Login with facebook</a>
+		</div>
+		<a href="#" class="sign">Sign up for FreeBee</a>
+	</footer>
+</body>
+</html>
